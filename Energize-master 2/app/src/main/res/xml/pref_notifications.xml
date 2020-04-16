@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<SwitchPreference
+		android:defaultValue="true"
+		android:key="advance.show_notification_bar"
+		android:title="@string/pref_title_show_notification_bar"
+		android:summaryOn="@string/pref_summary_on_show_notification_bar"
+		android:summaryOff="@string/pref_summary_off_show_notification_bar"/>
+
+</PreferenceScreen>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<Preference
+		android:key="developer.appVersion"
+		android:summary="N/A"
+		android:title="Version"/>
+	<Preference
+		android:key="developer.aboutApp"
+		android:summary="@string/pref_about_summary"
+		android:title="@string/pref_about_title"/>
+	<Preference
+		android:key="developer.about3rdPartyLibraries"
+		android:summary="@string/pref_about_3rd_party_summary"
+		android:title="@string/pref_about_3rd_party_title"/>
+
+</PreferenceScreen>

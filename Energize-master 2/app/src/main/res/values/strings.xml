@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string name="app_name" translatable="false">MyApp</string>
+
+	<string name="battery_state_charging">Charging</string>
+	<string name="battery_state_discharging">Not charging (battery in use)</string>
+	<string name="battery_state_full">Battery completely charged</string>
+	<string name="battery_state_unknown">Unknown</string>
+	<string name="textview_label_current_chargingstate">Charging state:</string>
+	<string name="dialog_title_cleardb_successfull">Database cleared</string>
+	<string name="dialog_text_cleardb_successfull">The battery statistics were deleted and it will
+        talke some time until the charging estimation will work again.
+    </string>
+	<string name="dialog_title_copydb_successfull">Database copied</string>
+	<string name="dialog_text_copydb_successfull">The battery statistics database was successfully
+        copied to your SD card.
+    </string>
+	<string name="textview_label_temperature">Battery temperature:</string>
+	<string name="textview_label_remainingtime">Remaining time:</string>
+	<string formatted="true" name="textview_text_remainingtime">%1$d hour(s) and %2$d minute(s)</string>
+	<string name="textview_label_timeonbattery">Time on battery:</string>
+	<string formatted="true" name="textview_text_timeonbattery">%1$d hour(s) and %2$d minute(s)</string>
+	<string formatted="true" name="textview_text_temperature_celsius" translatable="false">%.1f °C</string>
+	<string formatted="true" name="textview_text_temperature_fahrenheit" translatable="false">%.1f °F</string>
+	<string formatted="true" name="textview_text_temperature_kelvin" translatable="false">%.1f °K</string>
+
+	<string name="navigation_drawer_open">Open navigation drawer</string>
+	<string name="navigation_drawer_close">Close navigation drawer</string>
+
+	<!-- CATEGORY: Strings related to snackbars shown in the app -->
+	<string name="snackbar_not_installed_via_playstore_text">Not installed via the Google PlayStore.</string>
+	<string name="snackbar_not_installed_via_playstore_action">More infos</string>
+
+	<!-- CATEGORY: Strings released to alert dialogs in the app -->
+	<string name="alertdialog_not_via_playstore_title" translatable="false">Google PlayStore</string>
+	<string name="alertdialog_not_via_playstore_text">It seems that you have installed the app via an alternate app store (or manually). This is definitely okay, but we would prefer that you use the version which is maintained by us directly. This way you can ensure that you get the updates as soon as they are released. Furthermore, this would provide us with information who is using the app. This information helps us to optimize the app for specific devices or markets. Thank you for considering it!</string>
+	<string name="alertdialog_not_via_playstore_button_go_to_playstore">Open PlayStore</string>
+	<string name="alertdialog_not_via_playstore_button_dismiss">Dismiss message</string>
+
+	<!-- CATEGORY: String related to the DashClock extension -->
+	<string formatted="true" name="dc_widget_charged_long">%1$d%% charged</string>
+	<string name="dc_widget_desc">Shows the current battery charging state and an estimate for the remaining battery time.</string>
+
+	<!-- CATEGORY: Text for notifications -->
+	<string name="notification_title_missingstatistics">Too less statistics</string>
+	<string name="notification_title_charges">Battery is charging</string>
+	<string name="notification_title_discharges">On battery</string>
+	<string formatted="true" name="notification_text_estimate">%1$d hour(s) and %2$d minute(s) remaining</string>
+	<string name="notification_text_estimate_na">Estimation currently not available</string>
+	<string name="notification_text_missingstatistics">Please wait some more minutes</string>
+
+	<!-- CATEGORY: Text for app shortcuts -->
+	<string name="shortcut_overview_disabled">Overview disabled</string>
+	<string name="shortcut_overview_short">Overview</string>
+	<string name="shortcut_overview_long">@string/shortcut_overview_short</string>
+	<string name="shortcut_battery_disabled">Battery disabled</string>
+	<string name="shortcut_battery_short">Battery</string>
+	<string name="shortcut_battery_long">@string/shortcut_battery_short</string>
+	<string name="shortcut_temperature_disabled">Temperature disabled</string>
+	<string name="shortcut_temperature_short">Temperature</string>
+	<string name="shortcut_temperature_long">@string/shortcut_temperature_short</string>
+
+	<!-- CATEGORY: Strings related to Settings -->
+	<string name="title_activity_settings">Settings</string>
+
+	<!-- General settings -->
+	<string name="pref_header_general">General</string>
+	<string name="pref_title_clearstatsdb">Clear statistics database</string>
+	<string name="pref_summary_clearstatsdb">Clears the recorded battery events</string>
+	<string name="pref_title_change_batteryestimation">Battery estimation method</string>
+	<string formatted="true" name="pref_summary_change_batteryestimation">Method: %1$s</string>
+	<string name="pref_title_temperature_unit">Temperature unit</string>
+	<string formatted="true" name="pref_summary_temperature_unit">Used unit: %1$s</string>
+	<string name="pref_title_show_battery_animation">Show battery animation</string>
+	<string name="pref_summary_on_show_battery_animation">Display the battery animation on the overview screen</string>
+	<string name="pref_summary_off_show_battery_animation">Do not display the battery animation on the overview screen</string>
+
+	<!-- Notification settings -->
+	<string name="pref_header_notifications">Notifications</string>
+	<string name="pref_title_show_notification_bar">Status bar icon</string>
+	<string name="pref_summary_on_show_notification_bar">Do show a permanent notification with battery information</string>
+	<string name="pref_summary_off_show_notification_bar">Do not show a permanent notification</string>
+
+	<!-- About... settings -->
+	<string name="pref_header_about">About…</string>
+	<string name="pref_about_summary">Show more information about the app</string>
+	<string name="pref_about_title">About…</string>
+	<string name="pref_about_dialog_title">About Energize %s</string>
+	<string name="pref_about_dialog_license" translatable="false">Copyright (C) 2012-2018 Tim Hütz\n\nEnergize is licensed under the GNU General Public License v3.0.\n\nThe battery animation on the overview screen was developed by gelitenight and is licensed under the Apache License, Version 2.0.\n\nGraphView library (for drawing all charts) was developed by Jonas Gehring and is licensed under the Apache License, Version 2.0.\n\nThe TIMBER logging library was developed by Jake Wharton and is licensed under the Apache License, Version 2.0.</string>
+	<string name="pref_about_dialog_button_negative">Close</string>
+	<string name="pref_about_3rd_party_summary">Show a list of the used open source libraries and their licenses.</string>
+	<string name="pref_about_3rd_party_title">Used OSS libraries</string>
+
+	<string-array name="pref_list_temperature_unit_names">
+		<item>@string/pref_list_temperature_unit_value_and_title_celsius</item>
+		<item>@string/pref_list_temperature_unit_value_and_title_fahrenheit</item>
+		<item>@string/pref_list_temperature_unit_value_and_title_kelvin</item>
+	</string-array>
+	<string-array name="pref_list_batteryestimationmethod_names">
+		<item>Last change period (inaccurate)</item>
+		<item>Last n-change periods (bit inaccurate)</item>
+	</string-array>
+
+	<!-- CATEGORY: The actual values for preferences where the user has the choice between different settings -->
+	<string name="pref_list_temperature_unit_value_and_title_celsius" translatable="false">Celsius</string>
+	<string name="pref_list_temperature_unit_value_and_title_fahrenheit" translatable="false">Fahrenheit</string>
+	<string name="pref_list_temperature_unit_value_and_title_kelvin" translatable="false">Kelvin</string>
+	<string name="pref_list_batteryestimationmethod_value_lastchangeestimate" translatable="false">LastChangeEstimate</string>
+	<string name="pref_list_batteryestimationmethod_value_lastnchangeestimate" translatable="false">LastNChangeEstimate</string>
+	<string-array name="pref_list_batteryestimationmethod_values">
+		<item>@string/pref_list_batteryestimationmethod_value_lastchangeestimate</item>
+		<item>@string/pref_list_batteryestimationmethod_value_lastnchangeestimate</item>
+	</string-array>
+	<string-array name="pref_list_temperature_unit">
+		<item>@string/pref_list_temperature_unit_value_and_title_celsius</item>
+		<item>@string/pref_list_temperature_unit_value_and_title_fahrenheit</item>
+		<item>@string/pref_list_temperature_unit_value_and_title_kelvin</item>
+	</string-array>
+</resources>

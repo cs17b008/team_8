@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+	<shortcut
+		android:enabled="true"
+		android:icon="@drawable/ic_filter_list_black_24dp"
+		android:shortcutDisabledMessage="@string/shortcut_overview_disabled"
+		android:shortcutId="overview"
+		android:shortcutLongLabel="@string/shortcut_overview_long"
+		android:shortcutShortLabel="@string/shortcut_overview_short">
+		<intent
+			android:action="com.halcyonwaves.apps.energize.fragments.OverviewFragment"
+			android:targetClass="com.halcyonwaves.apps.energize.MainActivity"
+			android:targetPackage="com.halcyonwaves.apps.energize"/>
+	</shortcut>
+	<shortcut
+		android:enabled="true"
+		android:icon="@drawable/ic_battery_charging_90_black_24dp"
+		android:shortcutDisabledMessage="@string/shortcut_battery_disabled"
+		android:shortcutId="battery"
+		android:shortcutLongLabel="@string/shortcut_battery_long"
+		android:shortcutShortLabel="@string/shortcut_battery_short">
+		<intent
+			android:action="com.halcyonwaves.apps.energize.fragments.BatteryCapacityGraphFragment"
+			android:targetClass="com.halcyonwaves.apps.energize.MainActivity"
+			android:targetPackage="com.halcyonwaves.apps.energize"/>
+	</shortcut>
+
+	<shortcut
+		android:enabled="true"
+		android:icon="@drawable/ic_timeline_black_24dp"
+		android:shortcutDisabledMessage="@string/shortcut_temperature_disabled"
+		android:shortcutId="temperature"
+		android:shortcutLongLabel="@string/shortcut_temperature_long"
+		android:shortcutShortLabel="@string/shortcut_temperature_short">
+		<intent
+			android:action="com.halcyonwaves.apps.energize.fragments.TemperatureGraphFragment"
+			android:targetClass="com.halcyonwaves.apps.energize.MainActivity"
+			android:targetPackage="com.halcyonwaves.apps.energize"/>
+	</shortcut>
+
+</shortcuts>
+

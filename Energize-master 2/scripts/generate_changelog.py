@@ -1,0 +1,59 @@
+import re
+import markdown2
+from bs4 import BeautifulSoup as soup
+from argparse import ArgumentParser, ArgumentTypeError, FileType
+
+htmlPrefix = '<?xml version="1.0" encoding="utf-8"?>\n<changelog>\n'
+htmlPostfix = '</changelog>'
+
+# define some required regular expressions
+changelogMarkdownIdRegEx = re.compile( '\#\#\ Changelog' )
+versionNumberRegEx = re.compile( 'Version (\d\.\d\.?\d?)' )
+versionCodeRegEx = re.compile( 'Code: \<em\>(\d*)' )
+releaseDateRegEx = re.compile( 'Released on\: \<strong\>\<em\>(\d\d\d\d\-(\d\d|XX)-(\d\d|XX))' )
+
+if __name__ == '__main__':
+	# setup the argument parser and do the parsing
+	argumentParser = ArgumentParser( description = 'Tool for extracting a changelog out of the README.md file.', epilog = 'This tool was written for Energize. Copyright (c) 2012 by Tim Huetz. Licensed under the terms of the GPLv3.' )
+	argumentParser.add_argument( 'inputFile', type = FileType( 'r' ), help = 'the readme file from which the changelog should be extracted' )
+	argumentParser.add_argument( 'outputFile', type = FileType( 'w' ), help = 'the file to write the HTML changelog to' )
+	parsedArguments = argumentParser.parse_args()
+
+	# check if all required arguments were passed to the application
+	if parsedArguments.inputFile == None or parsedArguments.outputFile == None:
+		argumentParser.print_help()
+		exit( -1 )
+
+	# read the whole readme file into the memory space
+	text = parsedArguments.inputFile.read()
+
+	# extract just the changelog information
+	try:
+		startIter = next(changelogMarkdownIdRegEx.finditer( text ))
+		changelogText = text[startIter.end():]
+	except StopIteration:
+		print("Could not find the changelog information in the supplied file. Skipping!")
+		exit( -2 )
+
+	# convert the changelog into html to get the links set correctly
+	htmlChangelog = markdown2.markdown( changelogText )
+	parsedHtml = soup( htmlChangelog )
+
+	# find the facts about the version numbers denoted in the file
+	foundVersionNumbers = versionNumberRegEx.findall( htmlChangelog )
+	foundVersionCodes = versionCodeRegEx.findall( htmlChangelog )
+	foundReleaseDates = releaseDateRegEx.findall( htmlChangelog )
+	foundChangeLists = parsedHtml.find_all( 'ul' )
+
+	# generate the XML representation for the changelog
+	xmlChangelog = ''
+	for currentRelease in range( 0, len( foundVersionNumbers ) ):
+		xmlChangelog += '<release version="%s" versioncode="%s" releasedate="%s">\n' % ( foundVersionNumbers[ currentRelease ], foundVersionCodes[ currentRelease ], foundReleaseDates[ currentRelease ][ 0 ] )
+		for currentEntry in foundChangeLists[ currentRelease ].find_all( 'li' ):
+			xmlChangelog += '<change>%s</change>\n' % ( ''.join( currentEntry.findAll( text = True ) ) )
+		xmlChangelog += '</release>\n'
+
+	# write the XML file
+	parsedArguments.outputFile.write( htmlPrefix )
+	parsedArguments.outputFile.write( xmlChangelog )
+	parsedArguments.outputFile.write( htmlPostfix )

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<changelog>
+<release version="2.3" versioncode="230" releasedate="2018-04-XX">
+<change>Fix the bug that the animation in landscape mode hid all relevant information (issue no. 45)</change>
+<change>Fix the bug that when changing the device orientation the current menu selection was lost (issue no. 46)</change>
+<change>Update the used support libraries</change>
+</release>
+<release version="2.2.1" versioncode="221" releasedate="2018-01-09">
+<change>Update the app to the latest Android 8.1 release</change>
+<change>Update the used support libraries</change>
+</release>
+<release version="2.2" versioncode="220" releasedate="2017-09-09">
+<change>Update the app to the latest Android 8.0 release</change>
+<change>Add information about used OSS libraries</change>
+<change>Updated the library for drawing the graphs</change>
+<change>Add the TIMBER logging library</change>
+</release>
+<release version="2.1.1" versioncode="211" releasedate="2017-06-16">
+<change>Fix an ArrayOutOfBounds error</change>
+</release>
+<release version="2.1" versioncode="210" releasedate="2017-06-16">
+<change>Fix the back arrow in the settings categories to go back to the correct page</change>
+<change>Fix the axes of the battery graph to always show 0% - 100%</change>
+<change>Fix the logic to as the user for the required permissions</change>
+<change>Add app shortcuts for devices running Android 7.1 and higher</change>
+<change>Add a new animation to the main activity representing the current battery state</change>
+<change>Add the missing 'About this app' dialog in the settings</change>
+<change>Refined the used colors for the theme of the app</change>
+<change>Redesigned the application icon according to the new color scheme</change>
+<change>Minified the build APK</change>
+</release>
+<release version="2.0.1" versioncode="203" releasedate="2017-06-07">
+<change>Fix a bug which caused that the battery estimator was not set correctly on initial install</change>
+<change>Update the license file</change>
+</release>
+<release version="2.0" versioncode="200" releasedate="2017-06-06">
+<change>Switched to the latest version of the Android build tools and SDKs</change>
+<change>Updated the design of the app to Material Design</change>
+<change>Removed a lot of old and now unused resources</change>
+<change>Remove permissions which are not required anymore</change>
+<change>Lowered the required Android version to Android 4.1 (Jelly Bean)</change>
+</release>
+<release version="1.0" versioncode="112" releasedate="2014-06-12">
+<change>Complete redesign of the application</change>
+<change>Removed the special functions for ASUS Tablets</change>
+<change>Fixed bugs which caused an application crash</change>
+<change>Changed the database access method for better performance</change>
+<change>Removed a lot of old code and dependencies to 3rd party libraries</change>
+<change>A few optimizations for Android 4.4</change>
+</release>
+<release version="0.9.2" versioncode="106" releasedate="2013-11-04">
+<change>Updated the GraphView library from version 3.0 to version 3.1</change>
+<change>The app is now build against the Android 4.4 SDK</change>
+<change>Fixed some possible app crashes</change>
+</release>
+<release version="0.9.1" versioncode="102" releasedate="2013-07-28">
+<change>Modified the code-base to be compiled with the Android Studio</change>
+<change>Updated the used version of the ViewPagerIndicator library</change>
+</release>
+<release version="0.9" versioncode="97" releasedate="2013-05-21">
+<change>Added support for the DashClock widget</change>
+<change>Fixed a bug which caused that the fragments were not updated if the application was paused and then resumed</change>
+<change>Fixed some minor performance issues</change>
+</release>
+<release version="0.8.9" versioncode="89" releasedate="2013-04-11">
+<change>Added support for Kelvin as a temperature in the drawn graph (requested feature)</change>
+<change>Updated the library which is used for drawing the graphs</change>
+<change>Minor bug fixes for the backup agent</change>
+</release>
+<release version="0.8.8" versioncode="88" releasedate="2012-12-26">
+<change>Added a semi-downgrade option for the database to fix an application crash</change>
+</release>
+<release version="0.8.7" versioncode="87" releasedate="2012-12-05">
+<change>Made use of the ACRA library for bug reporting</change>
+<change>Switched to a new process for maintaining the change log</change>
+<change>Fixed a bug which caused that the user could click on the widgets only once after the device has booted</change>
+</release>
+<release version="0.8.6" versioncode="86" releasedate="2012-11-20">
+<change>Fixed a bug which caused that the widget was not updated if the status bar notification was disabled</change>
+</release>
+<release version="0.8.3" versioncode="83" releasedate="2012-11-16">
+<change>Added support for lock screen widgets on Android 4.2+</change>
+<change>Added support for high-resolution devices (like the Nexus 10)</change>
+<change>Added a new estimation algorithm which is a bit better than the old one (but still not accurate enough)</change>
+<change>Fixed a smaller bug in the old estimation algorithm</change>
+<change>Fixed a bug that the widget was requesting more space then required</change>
+<change>Removed the option to turn-off the automatic service start after the device has finished booting (because it is essential)</change>
+<change>Removed the theme support because it was buggy not not really useful</change>
+<change>Fixed two bugs which caused the application to crash with a null-pointer exception</change>
+</release>
+<release version="0.8.2" versioncode="82" releasedate="2012-11-07">
+<change>Fixed a bug which caused an application crash on tablets while pressing the lock-button</change>
+<change>Changed the icon of the lock-button</change>
+<change>Optimized the layout for 7 inch tablets (like the Nexus 7)</change>
+<change>Optimized the layout of the "What's new?" dialog</change>
+</release>
+<release version="0.8.1" versioncode="81" releasedate="2012-11-01">
+<change>Fixed a bug which caused an immediate application crash on the Nexus 7 when the application was closed by hitting the back key</change>
+</release>
+<release version="0.8.0" versioncode="80" releasedate="2012-11-01">
+<change>The remaining time will now also be displayed on the main activity of the application</change>
+<change>Updated the code to query the service for each battery depending question (remaining time, time on battery, etc.)</change>
+<change>Added a first (but still ugly) widget</change>
+<change>Added an option to lock the app to the current screen to be able to scroll through the battery graphs</change>
+<change>Fixed a bug that not all tables in the database were cleared when requested</change>
+<change>Added an option to copy the database to the SD card of the device</change>
+</release>
+<release version="0.7.3" versioncode="73" releasedate="2012-10-19">
+<change>Since a bug which caused an application crash while accessing the preferences on a device running an Android version below 4.0 cannot be fixed easily we had to drop Android 3.1 - 3.2 support again. SORRY guys!</change>
+<change>Changed the text of some labels</change>
+<change>Fixed a bug which caused that no notification icon was displayed</change>
+</release>
+<release version="0.7.2" versioncode="72" releasedate="2012-10-08">
+<change>Added support for Android 3.1 and higher</change>
+<change>Updated the version of the used GraphView library</change>
+<change>Updated the version of the used ViewPagerIndicator library</change>
+<change>Fixed a minor bug which caused sometimes the application to crash</change>
+</release>
+<release version="0.7" versioncode="70" releasedate="2012-09-19">
+<change>Basic support for Asus Transformer Pad Prime/TF300/Infinity dock battery capacity (showing the current capacity; not used for estimation)</change>
+<change>Added a basic first version of a separate tablet layout which uses the display more efficiently</change>
+<change>Rewrote the architecture for estimating the remaining time on battery to support more sophisticated algorithms in the future</change>
+<change>On Jelly Bean (Android 4.1) devices the status message in the notification bar gets an higher priority as soon as the capacity decreases below 15%</change>
+<change>Fixed some design issues on devices with a smaller display</change>
+<change>Fixed several smaller performance issues detected by an code analysis via Lint</change>
+<change>Fixed a bug which caused that sometimes the "no estimation available" message was displayed even if it was possible to estimate the remaining time</change>
+<change>Extended the statistics database with a table which logs the AC plugging events (power cord plugged in or unplugged)</change>
+<change>Added a label to the overview which displays the time the device is on battery power</change>
+</release>
+<release version="0.6.4" versioncode="64" releasedate="2012-08-27">
+<change>Disabled the background color of the battery capacity graph (it caused a graphical glitch)</change>
+<change>The battery capacity graph and the temperature graph will just show the last 24 hours of the logged information</change>
+<change>Done an automated code cleanup to be more resource efficient</change>
+</release>
+<release version="0.6.3" versioncode="63" releasedate="2012-08-22">
+<change>Fixed a bug which caused an application crash while rotating the view</change>
+<change>Fixed a bug which caused that the battery temperature was not logged</change>
+<change>Added a tab where a temperature graph is displayed</change>
+<change>Improved the design of the battery capacity graph</change>
+</release>
+<release version="0.6" versioncode="60" releasedate="2012-08-19">
+<change>The main screen shows the temperature of the battery</change>
+<change>Added an option to chose between Celsius and Fahrenheit</change>
+<change>Added several pages to the main screen to clean up the UI and prepare for a Tablet layout</change>
+<change>Resized the graph to make it better readable</change>
+<change>Updated the themes to optimize the look of the app</change>
+<change>Cleaned up the preference of the app</change>
+<change>Done a important code cleanup to remove unused code, optimize the speed and the power consumption of the app and make it easier to implement new features</change>
+</release>
+<release version="0.5" versioncode="50" releasedate="2012-08-12">
+<change>Redesigned the main screen of the application</change>
+<change>Changed the way battery change information are logged</change>
+<change>Updated the statistics database to store the battery temperature</change>
+<change>The main screen will show a graph about the charging and discharging process of the battery</change>
+<change>Done some more internal code cleanup</change>
+</release>
+<release version="0.4.1" versioncode="41" releasedate="2012-08-10">
+<change>Added license information for the application icon</change>
+<change>Applied a fix for the -1 estimation bug</change>
+<change>Fixed the bug that clicking the notification item won't show the main activity</change>
+<change>Added support for API level 14 (which includes plain Android 4.0.0)</change>
+<change>The notification bar item will now show if the battery is charges or discharges</change>
+</release>
+<release version="0.4" versioncode="40" releasedate="2012-08-07">
+<change>Basic code cleanup</change>
+<change>Cleanup of the preference screens</change>
+<change>The remaining time will show hours and minutes instead of just minutes</change>
+<change>Added an option to disable the automatic startup of the boot service</change>
+</release>
+<release version="0.3" versioncode="30" releasedate="2012-08-05">
+<change>Added the first (but simple) remaining time estimation</change>
+<change>Added the license text to the application (see About settings)</change>
+<change>Updated the application icon</change>
+<change>First version which is available on the Google Play store for everyone</change>
+<change>Prepared the code to be able to handle in-app billing stuff (for easy donations)</change>
+</release>
+<release version="0.2" versioncode="20" releasedate="2012-07-13">
+<change>Added a preference dialog for clearing the obtained battery statistics</change>
+<change>Added a status bar indicator for the current charging level of the battery</change>
+<change>Added a "What's new" dialog on the first startup of a new version</change>
+</release>
+<release version="0.1.3" versioncode="13" releasedate="2012-07-03">
+<change>Changed the layout of the battery statistics database</change>
+</release>
+<release version="0.1.2" versioncode="12" releasedate="2012-07-02">
+<change>Fixed a bug which caused that the preferences were not accessible</change>
+<change>Added a first debug option to send the battery statistic database via mail</change>
+<change>Updated the infrastructure to establish communication between the service and the app</change>
+</release>
+<release version="0.1" versioncode="10" releasedate="2012-06-29">
+<change>Added code to obtain statistics about the battery charging</change>
+<change>Added GPL header to all source files</change>
+<change>Moved all strings to the resource file (for supporting localization)</change>
+</release>
+<release version="0.0.2" versioncode="2" releasedate="2012-04-22">
+<change>Added a preference dialog for changing the used theme of the app</change>
+<change>Added an dialog to show information about the application</change>
+</release>
+<release version="0.0.1" versioncode="1" releasedate="2012-04-17">
+<change>Initial version which is available in the Google Play Store</change>
+</release>
+</changelog>
